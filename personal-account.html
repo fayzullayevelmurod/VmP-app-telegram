@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VmV-App</title>
+  <!-- Swiper css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Swiper css -->
+  <!-- favicon -->
+  <link rel="icon" href="./images/logo/favicon.svg">
+  <!-- favicon -->
+  <!-- fonts -->
+  <link rel="stylesheet" href="./assets/fonts/Inter/stylesheet.css">
+  <link rel="stylesheet" href="./assets/fonts/sf-pro/stylesheet.css">
+  <!-- fonts -->
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="./assets/scss/vendors/bootstrap.css">
+  <!-- bootstrap -->
+  <!-- css link -->
+  <link rel="stylesheet" href="./assets/scss/style.css">
+  <!-- css link -->
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <div class="modal_bg_one"></div>
+    <div class="modal_bg_two"></div>
+    <div class="modal_bg_three"></div>
+    <div class="modal_bg_four"></div>
+
+    <!-- subscription_modal -->
+    <div class="subscription_modal">
+      <button class="subscription_modal_close">
+        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.5 1.5L21.5 21.5M21.5 1.5L1.5 21.5" stroke="#111135" stroke-width="3" stroke-linecap="round" />
+        </svg>
+      </button>
+      <h3>
+        Subscription payment
+      </h3>
+      <div class="subscription_modal_head">
+        <span>
+          Select payment method
+        </span>
+      </div>
+      <div class="tabs" data-tabs>
+        <div class="tabs__nav">
+          <button class="tabs__btn" data-tab="tab-1">
+            Russian Bank Card
+          </button>
+          <button class="tabs__btn is-active" data-tab="tab-2">
+            Foreign bank card
+          </button>
+        </div>
+
+        <div class="tabs__content">
+          <div class="tabs__panel" id="tab-1">
+            <div class="payment-methods">
+              <img src="./assets/images/payment3.svg" alt="Mir">
+            </div>
+          </div>
+          <div class="tabs__panel is-active" id="tab-2">
+            <div class="payment-methods">
+              <img src="./assets/images/payment1.svg" alt="Mastercard">
+              <img src="./assets/images/payment2.svg" alt="Visa">
+            </div>
+          </div>
+        </div>
+        <button class="plan_btn">
+          Select your plan
+        </button>
+        <p>
+          By placing an order, you agree to regular debits, the processing of personal data, accept the terms of the public offer,
+          as well as the privacy policy of the application.
+        </p>
+      </div>
+    </div>
+    <!-- subscription_modal -->
+
+    <!-- plan_modal -->
+    <div class="plan_modal">
+      <div class="plan_modal_head">
+        <button class="prev_link">
+          <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 17.0002L1.78885 9.89467C1.05181 9.52615 1.0518 8.47434 1.78885 8.10582L16 1.00024" stroke="#111135"
+              stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+        <h3>
+          Subscription payment
+        </h3>
+        <button class="plan_modal_close">
+          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.5 1.5L21.5 21.5M21.5 1.5L1.5 21.5" stroke="#111135" stroke-width="3" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+      <span>
+        Select plan
+      </span>
+      <div class="tabs" data-tabs>
+        <div class="tabs__nav">
+          <button class="tabs__btn is-active" data-tab="tab-1">
+            3 devices
+          </button>
+        </div>
+
+        <div class="tabs__content">
+          <div class="tabs__panel is-active" id="tab-1">
+            <div class="plan_text">
+              <ul>
+                <li>
+                  Connect up to 3 devices simultaneously
+                </li>
+                <li>
+                  All servers and locations
+                </li>
+                <li>
+                  24/7 technical support
+                </li>
+              </ul>
+              <h6>
+                $3
+                <b>
+                  /month
+                </b>
+              </h6>
+            </div>
+          </div>
+        </div>
+        <button class="buy_btn">
+          Buy a subscription
+        </button>
+        <p>
+          You will be redirected to the payment system page to complete your payment.
+        </p>
+      </div>
+    </div>
+    <!-- plan_modal -->
+
+    <!-- modal_manage -->
+    <div class="modal_manage">
+      <button class="modal_manage_close">
+        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.5 1.5L21.5 21.5M21.5 1.5L1.5 21.5" stroke="#111135" stroke-width="3" stroke-linecap="round" />
+        </svg>
+      </button>
+      <h3>
+        Manage connected device
+      </h3>
+      <form action="#">
+        <label for="#">
+          Change device name
+        </label>
+        <div class="input_block">
+          <input type="text" value="" placeholder="Realme 8">
+          <button class="edit_btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.2594 4.52307L5.04936 13.2131C4.73936 13.5431 4.43936 14.1931 4.37936 14.6431L4.00936 17.8831C3.87936 19.0531 4.71936 19.8531 5.87936 19.6531L9.09936 19.1031C9.54936 19.0231 10.1794 18.6931 10.4894 18.3531L18.6994 9.66307C20.1194 8.16307 20.7594 6.45307 18.5494 4.36307C16.3494 2.29307 14.6794 3.02307 13.2594 4.52307Z"
+                stroke="#848488" stroke-width="1.625" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M11.8887 5.97308C12.3187 8.73308 14.5587 10.8431 17.3387 11.1231" stroke="#848488"
+                stroke-width="1.625" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <div class="form_btns">
+          <button class="white_btn">
+            Save changes
+          </button>
+          <button class="delete_btn">
+            Delete device
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- modal_manage -->
+
+    <!-- modal_device_name -->
+    <div class="modal_device_name">
+      <h3>
+        Are you sure you want to delete the device “Realme 8”?
+      </h3>
+      <div class="form_btns">
+        <button class="red_btn">
+          Yes
+        </button>
+        <button class="no_btn">
+          No
+        </button>
+      </div>
+    </div>
+    <!-- modal_device_name -->
+
+    <!-- header -->
+    <header class="header header_three">
+      <div class="container">
+        <h2 class="section_title">
+          My Account
+        </h2>
+        <div class="lang-select">
+          <button class="lang-select__current" type="button">
+            <span>EN</span>
+          </button>
+
+          <ul class="lang-select__list">
+            <li data-value="en">EN</li>
+            <li data-value="ru">RU</li>
+            <li data-value="uz">UZ</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- header -->
+
+    <!-- main -->
+    <main>
+
+      <!-- personal-account -->
+      <section class="personal_account">
+        <div class="container">
+          <div class="tabs" data-tabs>
+            <div class="tabs__nav">
+              <button class="tabs__btn is-active" data-tab="tab-1">
+                Account
+              </button>
+              <button class="tabs__btn" data-tab="tab-2">
+                Plans
+              </button>
+            </div>
+
+            <div class="tabs__content">
+              <div class="tabs__panel is-active" id="tab-1">
+                <div class="accounts">
+                  <div class="accounts_left">
+                    <ul>
+                      <li>
+                        <b>
+                          ID
+                        </b>
+                        <span>
+                          a3f9b2c4-6d1e-4f3a-9b8e-2c7d5f1a9b0c
+                        </span>
+                      </li>
+                      <li>
+                        <b>
+                          Email
+                        </b>
+                        <a href="mailto:polina300750@gmail.com">
+                          polina300750@gmail.com
+                        </a>
+                      </li>
+                    </ul>
+                    <h6>
+                      Manage Subscription
+                    </h6>
+                    <p>
+                      The “3 devices” subscription is valid until October 31, 2025.
+                    </p>
+                    <div class="btns">
+                      <button class="white_btn subscription_modal_btn">
+                        Сhange the payment card
+                      </button>
+                      <button class="white_btn_two">
+                        Cancel subscription
+                      </button>
+                    </div>
+                  </div>
+                  <div class="connected_devices">
+                    <h3>
+                      Connected Devices
+                    </h3>
+                    <div class="connected_devices_in">
+                      <div class="connected_devices_block">
+                        <div class="connected_devices_block_left">
+                          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M22.6 8.5V19.5C22.6 23.9 21.5 25 17.1 25H10.5C6.1 25 5 23.9 5 19.5V8.5C5 4.1 6.1 3 10.5 3H17.1C21.5 3 22.6 4.1 22.6 8.5Z"
+                              stroke="#111135" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15.9996 6.85004H11.5996" stroke="#111135" stroke-width="1.65" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path
+                              d="M13.7988 21.81C14.7404 21.81 15.5038 21.0467 15.5038 20.105C15.5038 19.1634 14.7404 18.4 13.7988 18.4C12.8571 18.4 12.0938 19.1634 12.0938 20.105C12.0938 21.0467 12.8571 21.81 13.7988 21.81Z"
+                              stroke="#111135" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>
+                            Realme 8
+                          </span>
+                        </div>
+                        <button class="edit_btn">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.2594 4.52307L5.04936 13.2131C4.73936 13.5431 4.43936 14.1931 4.37936 14.6431L4.00936 17.8831C3.87936 19.0531 4.71936 19.8531 5.87936 19.6531L9.09936 19.1031C9.54936 19.0231 10.1794 18.6931 10.4894 18.3531L18.6994 9.66307C20.1194 8.16307 20.7594 6.45307 18.5494 4.36307C16.3494 2.29307 14.6794 3.02307 13.2594 4.52307Z"
+                              stroke="#848488" stroke-width="1.625" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.8887 5.97308C12.3187 8.73308 14.5587 10.8431 17.3387 11.1231" stroke="#848488" stroke-width="1.625"
+                              stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="connected_devices_block">
+                        <div class="connected_devices_block_left">
+                          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M7.51398 2.33331H20.4756C24.629 2.33331 25.6673 3.37165 25.6673 7.51331V14.8983C25.6673 19.0516 24.629 20.0783 20.4873 20.0783H7.51398C3.37232 20.09 2.33398 19.0516 2.33398 14.91V7.51331C2.33398 3.37165 3.37232 2.33331 7.51398 2.33331Z"
+                              stroke="#111135" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M14 20.09V25.6667" stroke="#111135" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M2.33398 15.1667H25.6673" stroke="#111135" stroke-width="1.75" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path d="M8.75 25.6667H19.25" stroke="#111135" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>
+                            MacBook Air M2
+                          </span>
+                        </div>
+                        <button class="edit_btn">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.2594 4.52307L5.04936 13.2131C4.73936 13.5431 4.43936 14.1931 4.37936 14.6431L4.00936 17.8831C3.87936 19.0531 4.71936 19.8531 5.87936 19.6531L9.09936 19.1031C9.54936 19.0231 10.1794 18.6931 10.4894 18.3531L18.6994 9.66307C20.1194 8.16307 20.7594 6.45307 18.5494 4.36307C16.3494 2.29307 14.6794 3.02307 13.2594 4.52307Z"
+                              stroke="#848488" stroke-width="1.625" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.8887 5.97308C12.3187 8.73308 14.5587 10.8431 17.3387 11.1231" stroke="#848488" stroke-width="1.625"
+                              stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="connected_devices_block">
+                        <div class="connected_devices_block_left">
+                          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M7.51398 2.33331H20.4756C24.629 2.33331 25.6673 3.37165 25.6673 7.51331V14.8983C25.6673 19.0516 24.629 20.0783 20.4873 20.0783H7.51398C3.37232 20.09 2.33398 19.0516 2.33398 14.91V7.51331C2.33398 3.37165 3.37232 2.33331 7.51398 2.33331Z"
+                              stroke="#111135" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M14 20.09V25.6666" stroke="#111135" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M2.33398 15.1667H25.6673" stroke="#111135" stroke-width="1.75" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path d="M8.75 25.6667H19.25" stroke="#111135" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>
+                            Dell XPS 13
+                          </span>
+                        </div>
+                        <button class="edit_btn">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.2594 4.52307L5.04936 13.2131C4.73936 13.5431 4.43936 14.1931 4.37936 14.6431L4.00936 17.8831C3.87936 19.0531 4.71936 19.8531 5.87936 19.6531L9.09936 19.1031C9.54936 19.0231 10.1794 18.6931 10.4894 18.3531L18.6994 9.66307C20.1194 8.16307 20.7594 6.45307 18.5494 4.36307C16.3494 2.29307 14.6794 3.02307 13.2594 4.52307Z"
+                              stroke="#848488" stroke-width="1.625" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.8887 5.97308C12.3187 8.73308 14.5587 10.8431 17.3387 11.1231" stroke="#848488" stroke-width="1.625"
+                              stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="connected_devices_block">
+                        <div class="connected_devices_block_left">
+                          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M22.6 8.5V19.5C22.6 23.9 21.5 25 17.1 25H10.5C6.1 25 5 23.9 5 19.5V8.5C5 4.1 6.1 3 10.5 3H17.1C21.5 3 22.6 4.1 22.6 8.5Z"
+                              stroke="#111135" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15.9996 6.85004H11.5996" stroke="#111135" stroke-width="1.65" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path
+                              d="M13.7988 21.81C14.7404 21.81 15.5038 21.0467 15.5038 20.105C15.5038 19.1634 14.7404 18.4 13.7988 18.4C12.8571 18.4 12.0938 19.1634 12.0938 20.105C12.0938 21.0467 12.8571 21.81 13.7988 21.81Z"
+                              stroke="#111135" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>
+                            Iphone 17
+                          </span>
+                        </div>
+                        <button class="edit_btn">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.2594 4.52307L5.04936 13.2131C4.73936 13.5431 4.43936 14.1931 4.37936 14.6431L4.00936 17.8831C3.87936 19.0531 4.71936 19.8531 5.87936 19.6531L9.09936 19.1031C9.54936 19.0231 10.1794 18.6931 10.4894 18.3531L18.6994 9.66307C20.1194 8.16307 20.7594 6.45307 18.5494 4.36307C16.3494 2.29307 14.6794 3.02307 13.2594 4.52307Z"
+                              stroke="#848488" stroke-width="1.625" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.8887 5.97308C12.3187 8.73308 14.5587 10.8431 17.3387 11.1231" stroke="#848488" stroke-width="1.625"
+                              stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="connected_devices_block">
+                        <div class="connected_devices_block_left">
+                          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M7.51398 2.33331H20.4756C24.629 2.33331 25.6673 3.37165 25.6673 7.51331V14.8983C25.6673 19.0516 24.629 20.0783 20.4873 20.0783H7.51398C3.37232 20.09 2.33398 19.0516 2.33398 14.91V7.51331C2.33398 3.37165 3.37232 2.33331 7.51398 2.33331Z"
+                              stroke="#111135" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M14 20.09V25.6666" stroke="#111135" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M2.33398 15.1667H25.6673" stroke="#111135" stroke-width="1.75" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path d="M8.75 25.6667H19.25" stroke="#111135" stroke-width="1.75" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                          <span>
+                            HP Spectre x360
+                          </span>
+                        </div>
+                        <button class="edit_btn">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.2594 4.52307L5.04936 13.2131C4.73936 13.5431 4.43936 14.1931 4.37936 14.6431L4.00936 17.8831C3.87936 19.0531 4.71936 19.8531 5.87936 19.6531L9.09936 19.1031C9.54936 19.0231 10.1794 18.6931 10.4894 18.3531L18.6994 9.66307C20.1194 8.16307 20.7594 6.45307 18.5494 4.36307C16.3494 2.29307 14.6794 3.02307 13.2594 4.52307Z"
+                              stroke="#848488" stroke-width="1.625" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.8887 5.97308C12.3187 8.73308 14.5587 10.8431 17.3387 11.1231" stroke="#848488" stroke-width="1.625"
+                              stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="connected_devices_block">
+                        <div class="connected_devices_block_left">
+                          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M22.6 8.5V19.5C22.6 23.9 21.5 25 17.1 25H10.5C6.1 25 5 23.9 5 19.5V8.5C5 4.1 6.1 3 10.5 3H17.1C21.5 3 22.6 4.1 22.6 8.5Z"
+                              stroke="#111135" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15.9996 6.85004H11.5996" stroke="#111135" stroke-width="1.65" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path
+                              d="M13.7988 21.81C14.7404 21.81 15.5038 21.0467 15.5038 20.105C15.5038 19.1634 14.7404 18.4 13.7988 18.4C12.8571 18.4 12.0938 19.1634 12.0938 20.105C12.0938 21.0467 12.8571 21.81 13.7988 21.81Z"
+                              stroke="#111135" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>
+                            Realme 8
+                          </span>
+                        </div>
+                        <button class="edit_btn">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.2594 4.52307L5.04936 13.2131C4.73936 13.5431 4.43936 14.1931 4.37936 14.6431L4.00936 17.8831C3.87936 19.0531 4.71936 19.8531 5.87936 19.6531L9.09936 19.1031C9.54936 19.0231 10.1794 18.6931 10.4894 18.3531L18.6994 9.66307C20.1194 8.16307 20.7594 6.45307 18.5494 4.36307C16.3494 2.29307 14.6794 3.02307 13.2594 4.52307Z"
+                              stroke="#848488" stroke-width="1.625" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.8887 5.97308C12.3187 8.73308 14.5587 10.8431 17.3387 11.1231" stroke="#848488" stroke-width="1.625"
+                              stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="connected_devices_block">
+                        <div class="connected_devices_block_left">
+                          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M22.6 8.5V19.5C22.6 23.9 21.5 25 17.1 25H10.5C6.1 25 5 23.9 5 19.5V8.5C5 4.1 6.1 3 10.5 3H17.1C21.5 3 22.6 4.1 22.6 8.5Z"
+                              stroke="#111135" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15.9996 6.85004H11.5996" stroke="#111135" stroke-width="1.65" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path
+                              d="M13.7988 21.81C14.7404 21.81 15.5038 21.0467 15.5038 20.105C15.5038 19.1634 14.7404 18.4 13.7988 18.4C12.8571 18.4 12.0938 19.1634 12.0938 20.105C12.0938 21.0467 12.8571 21.81 13.7988 21.81Z"
+                              stroke="#111135" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>
+                            Google Pixel 10 Pro
+                          </span>
+                        </div>
+                        <button class="edit_btn">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.2594 4.52307L5.04936 13.2131C4.73936 13.5431 4.43936 14.1931 4.37936 14.6431L4.00936 17.8831C3.87936 19.0531 4.71936 19.8531 5.87936 19.6531L9.09936 19.1031C9.54936 19.0231 10.1794 18.6931 10.4894 18.3531L18.6994 9.66307C20.1194 8.16307 20.7594 6.45307 18.5494 4.36307C16.3494 2.29307 14.6794 3.02307 13.2594 4.52307Z"
+                              stroke="#848488" stroke-width="1.625" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.8887 5.97308C12.3187 8.73308 14.5587 10.8431 17.3387 11.1231" stroke="#848488" stroke-width="1.625"
+                              stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="connected_devices_block">
+                        <div class="connected_devices_block_left">
+                          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M7.51398 2.33331H20.4756C24.629 2.33331 25.6673 3.37165 25.6673 7.51331V14.8983C25.6673 19.0516 24.629 20.0783 20.4873 20.0783H7.51398C3.37232 20.09 2.33398 19.0516 2.33398 14.91V7.51331C2.33398 3.37165 3.37232 2.33331 7.51398 2.33331Z"
+                              stroke="#111135" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M14 20.09V25.6666" stroke="#111135" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M2.33398 15.1667H25.6673" stroke="#111135" stroke-width="1.75" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path d="M8.75 25.6667H19.25" stroke="#111135" stroke-width="1.75" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                          <span>
+                            Dell XPS 13
+                          </span>
+                        </div>
+                        <button class="edit_btn">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.2594 4.52307L5.04936 13.2131C4.73936 13.5431 4.43936 14.1931 4.37936 14.6431L4.00936 17.8831C3.87936 19.0531 4.71936 19.8531 5.87936 19.6531L9.09936 19.1031C9.54936 19.0231 10.1794 18.6931 10.4894 18.3531L18.6994 9.66307C20.1194 8.16307 20.7594 6.45307 18.5494 4.36307C16.3494 2.29307 14.6794 3.02307 13.2594 4.52307Z"
+                              stroke="#848488" stroke-width="1.625" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.8887 5.97308C12.3187 8.73308 14.5587 10.8431 17.3387 11.1231" stroke="#848488" stroke-width="1.625"
+                              stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="connected_devices_block">
+                        <div class="connected_devices_block_left">
+                          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M22.6 8.5V19.5C22.6 23.9 21.5 25 17.1 25H10.5C6.1 25 5 23.9 5 19.5V8.5C5 4.1 6.1 3 10.5 3H17.1C21.5 3 22.6 4.1 22.6 8.5Z"
+                              stroke="#111135" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15.9996 6.85004H11.5996" stroke="#111135" stroke-width="1.65" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path
+                              d="M13.7988 21.81C14.7404 21.81 15.5038 21.0467 15.5038 20.105C15.5038 19.1634 14.7404 18.4 13.7988 18.4C12.8571 18.4 12.0938 19.1634 12.0938 20.105C12.0938 21.0467 12.8571 21.81 13.7988 21.81Z"
+                              stroke="#111135" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>
+                            Iphone 17
+                          </span>
+                        </div>
+                        <button class="edit_btn">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.2594 4.52307L5.04936 13.2131C4.73936 13.5431 4.43936 14.1931 4.37936 14.6431L4.00936 17.8831C3.87936 19.0531 4.71936 19.8531 5.87936 19.6531L9.09936 19.1031C9.54936 19.0231 10.1794 18.6931 10.4894 18.3531L18.6994 9.66307C20.1194 8.16307 20.7594 6.45307 18.5494 4.36307C16.3494 2.29307 14.6794 3.02307 13.2594 4.52307Z"
+                              stroke="#848488" stroke-width="1.625" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.8887 5.97308C12.3187 8.73308 14.5587 10.8431 17.3387 11.1231" stroke="#848488" stroke-width="1.625"
+                              stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="connected_devices_block">
+                        <div class="connected_devices_block_left">
+                          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M7.51398 2.33331H20.4756C24.629 2.33331 25.6673 3.37165 25.6673 7.51331V14.8983C25.6673 19.0516 24.629 20.0783 20.4873 20.0783H7.51398C3.37232 20.09 2.33398 19.0516 2.33398 14.91V7.51331C2.33398 3.37165 3.37232 2.33331 7.51398 2.33331Z"
+                              stroke="#111135" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M14 20.09V25.6667" stroke="#111135" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M2.33398 15.1667H25.6673" stroke="#111135" stroke-width="1.75" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                            <path d="M8.75 25.6667H19.25" stroke="#111135" stroke-width="1.75" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                          <span>
+                            HP Spectre x360
+                          </span>
+                        </div>
+                        <button class="edit_btn">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.2594 4.52307L5.04936 13.2131C4.73936 13.5431 4.43936 14.1931 4.37936 14.6431L4.00936 17.8831C3.87936 19.0531 4.71936 19.8531 5.87936 19.6531L9.09936 19.1031C9.54936 19.0231 10.1794 18.6931 10.4894 18.3531L18.6994 9.66307C20.1194 8.16307 20.7594 6.45307 18.5494 4.36307C16.3494 2.29307 14.6794 3.02307 13.2594 4.52307Z"
+                              stroke="#848488" stroke-width="1.625" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.8887 5.97308C12.3187 8.73308 14.5587 10.8431 17.3387 11.1231" stroke="#848488" stroke-width="1.625"
+                              stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__panel" id="tab-2">
+                <div class="subscription_cards">
+                  <div class="subscription_card">
+                    <div class="subscription_card_top">
+                      <h3>
+                        1 devices
+                      </h3>
+                      <ul>
+                        <li>
+                          Connect one device
+                        </li>
+                        <li>
+                          All servers and locations
+                        </li>
+                        <li>
+                          24/7 customer support
+                        </li>
+                      </ul>
+                      <div class="price">
+                        <h6>
+                          $3
+                          <span>
+                            /month
+                          </span>
+                        </h6>
+                        <button class="white_btn">
+                          Start now
+                        </button>
+                      </div>
+                    </div>
+                    <div class="subscription_card_bottom">
+                      <img src="./assets/images/subscription1.png" alt="">
+                    </div>
+                  </div>
+                  <div class="subscription_card">
+                    <div class="subscription_card_top">
+                      <h3>
+                        3 devices
+                      </h3>
+                      <ul>
+                        <li>
+                          Connect up to three devices
+                        </li>
+                        <li>
+                          All servers and locations
+                        </li>
+                        <li>
+                          24/7 customer support
+                        </li>
+                      </ul>
+                      <div class="price">
+                        <h6>
+                          $5
+                          <span>
+                            /month
+                          </span>
+                        </h6>
+                        <button class="white_btn">
+                          Start now
+                        </button>
+                      </div>
+                    </div>
+                    <div class="subscription_card_bottom">
+                      <img src="./assets/images/subscription2.png" alt="">
+                    </div>
+                  </div>
+                  <div class="subscription_card">
+                    <div class="subscription_card_top">
+                      <h3>
+                        5 devices
+                      </h3>
+                      <ul>
+                        <li>
+                          Connect up to five devices
+                        </li>
+                        <li>
+                          All servers and locations
+                        </li>
+                        <li>
+                          24/7 customer support
+                        </li>
+                      </ul>
+                      <div class="price">
+                        <h6>
+                          $8
+                          <span>
+                            /month
+                          </span>
+                        </h6>
+                        <button class="white_btn">
+                          Start now
+                        </button>
+                      </div>
+                    </div>
+                    <div class="subscription_card_bottom">
+                      <img src="./assets/images/subscription3.png" alt="">
+                    </div>
+                  </div>
+                  <div class="subscription_card">
+                    <div class="subscription_card_top">
+                      <h3>
+                        10 devices
+                      </h3>
+                      <ul>
+                        <li>
+                          Connect up to ten devices
+                        </li>
+                        <li>
+                          All servers and locations
+                        </li>
+                        <li>
+                          24/7 customer support
+                        </li>
+                      </ul>
+                      <div class="price">
+                        <h6>
+                          $15
+                          <span>
+                            /month
+                          </span>
+                        </h6>
+                        <button class="white_btn">
+                          Start now
+                        </button>
+                      </div>
+                    </div>
+                    <div class="subscription_card_bottom">
+                      <img src="./assets/images/subscription4.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <!-- personal-account -->
+
+    </main>
+    <!-- main -->
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_left">
+          <a href="/" class="logo">
+            <img class="light_img" src="./assets/images/logo/footer_logo.svg" alt="">
+            <img class="dark_img" src="./assets/images/logo/white_logo.svg" alt="">
+          </a>
+          <span>
+            Digital freedom begins here
+          </span>
+        </div>
+        <div class="footer_right">
+          <ul>
+            <li>
+              <a href="#">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Benefits
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Log in
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#">
+                Get for iOS
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Get for Android
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Get for macOS
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Get for Windows
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Get for Apple TV
+              </a>
+            </li>
+          </ul>
+          <ul class="social_media">
+            <li>
+              <a href="#">
+                <img src="./assets/images/icons/social1.svg" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./assets/images/icons/social2.svg" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./assets/images/icons/social3.svg" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./assets/images/icons/social4.svg" alt="">
+              </a>
+            </li>
+          </ul>
+          <ul class="policy">
+            <li>
+              <a href="#">
+                Privacy policy
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Terms of use
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- footer -->
+  </div>
+
+  <!-- bootstrap -->
+  <script src="./assets/scripts/bootstrap.js"></script>
+  <!-- bootstrap -->
+  <!-- Swiper js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <!-- Swiper js -->
+  <!-- js file -->
+  <script src="./assets/scripts/main.js" defer></script>
+  <!-- js file -->
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VmV-App</title>
+  <!-- favicon -->
+  <link rel="icon" href="./images/logo/favicon.svg">
+  <!-- favicon -->
+  <!-- fonts -->
+  <link rel="stylesheet" href="./assets/fonts/Inter/stylesheet.css">
+  <link rel="stylesheet" href="./assets/fonts/sf-pro/stylesheet.css">
+  <!-- fonts -->
+  <!-- css link -->
+  <link rel="stylesheet" href="./assets/scss/style.css">
+  <!-- css link -->
+</head>
+
+<body class="email_body">
+  <div class="wrapper">
+
+    <header class="header_two">
+      <div class="container">
+        <a href="/" class="logo">
+          <img class="light_img" src="./assets/images/logo/header_logo.svg" alt="">
+          <img class="dark_img" src="./assets/images/logo/white_logo.svg" alt="">
+        </a>
+        <div class="lang-select">
+          <button class="lang-select__current" type="button">
+            <span>EN</span>
+          </button>
+
+          <ul class="lang-select__list">
+            <li data-value="en">EN</li>
+            <li data-value="ru">RU</li>
+            <li data-value="uz">UZ</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main>
+
+      <!-- email -->
+      <section class="email">
+        <div class="container">
+          <div class="email_form">
+            <h2>
+              Glad you're here
+            </h2>
+            <p class="email_form_text">
+              Just enter your email — we will create an account or log in to an existing one.
+            </p>
+            <form action="#">
+              <div class="field" id="emailField">
+                <input type="email" id="email" placeholder=" " />
+                <label for="email">Email</label>
+                <span class="error-text">Please enter a valid email</span>
+              </div>
+              <button class="white_btn">
+                Get code
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- email -->
+
+    </main>
+    <!-- main -->
+
+  </div>
+
+  <!-- js file -->
+  <script src="./assets/scripts/main.js" defer></script>
+  <!-- js file -->
+</body>
+
+</html>

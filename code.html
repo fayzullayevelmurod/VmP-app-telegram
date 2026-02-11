@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VmV-App</title>
+  <!-- favicon -->
+  <link rel="icon" href="./images/logo/favicon.svg">
+  <!-- favicon -->
+  <!-- fonts -->
+  <link rel="stylesheet" href="./assets/fonts/Inter/stylesheet.css">
+  <link rel="stylesheet" href="./assets/fonts/sf-pro/stylesheet.css">
+  <!-- fonts -->
+  <!-- css link -->
+  <link rel="stylesheet" href="./assets/scss/style.css">
+  <!-- css link -->
+</head>
+
+<body class="email_body">
+  <div class="wrapper">
+
+    <header class="header_two">
+      <div class="container">
+        <a href="/" class="logo">
+          <img class="light_img" src="./assets/images/logo/header_logo.svg" alt="">
+          <img class="dark_img" src="./assets/images/logo/white_logo.svg" alt="">
+        </a>
+        <div class="lang-select">
+          <button class="lang-select__current" type="button">
+            <span>EN</span>
+          </button>
+
+          <ul class="lang-select__list">
+            <li data-value="en">EN</li>
+            <li data-value="ru">RU</li>
+            <li data-value="uz">UZ</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main>
+
+      <!-- email -->
+      <section class="email enter_code">
+        <div class="container">
+          <div class="email_form">
+            <h2>
+              Enter<br> verification code
+            </h2>
+            <p class="email_form_text">
+              We have sent a 6-digit code to vmv@gmail.com
+            </p>
+            <form action="#">
+              <div class="otp-container" data-state="default">
+                <div class="otp-inputs">
+                  <div>
+                    <input type="text" maxlength="1" />
+                    <input type="text" maxlength="1" />
+                    <input type="text" maxlength="1" />
+                  </div>
+                  <div>
+                    <input type="text" maxlength="1" />
+                    <input type="text" maxlength="1" />
+                    <input type="text" maxlength="1" />
+                  </div>
+                </div>
+
+                <p class="otp-message">
+                  Send code again in <span id="timer">33</span> seconds...
+                </p>
+
+                <button class="resend-btn" hidden>Send code again</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- email -->
+
+    </main>
+    <!-- main -->
+
+  </div>
+
+  <!-- js file -->
+  <script src="./assets/scripts/main.js" defer></script>
+  <!-- js file -->
+</body>
+
+</html>

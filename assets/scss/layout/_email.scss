@@ -1,0 +1,231 @@
+// email
+.email_body {
+  background-image: url('../images/email_bg5.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  height: 100%;
+}
+
+.email {
+  margin-top: 45%;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &_form {
+    border-radius: 40px;
+    border: 1px solid $color-white;
+    backdrop-filter: blur(5px);
+    text-align: center;
+    max-width: 680px;
+    padding: 40px 10px 60px 10px;
+
+    h2 {
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 110.00000000000001%;
+      color: $color-dark;
+    }
+
+    &_text {
+      font-weight: 400;
+      line-height: 110.00000000000001%;
+      color: $color-dark;
+      font-size: 18px;
+      margin: 10px auto;
+    }
+  }
+
+  .field {
+    position: relative;
+
+    input {
+      width: 100%;
+      padding: 16px;
+      border-radius: 20px;
+      border: 1.5px solid $color-dark;
+      outline: none;
+      background: transparent;
+      transition: .3s ease;
+      font-weight: 400;
+      line-height: 110.00000000000001%;
+      color: $color-grey;
+      height: 52px;
+      font-size: 18px;
+
+      &:focus {
+        border-color: $color-dark;
+      }
+    }
+
+    label {
+      position: absolute;
+      left: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 110.00000000000001%;
+      color: $color-grey;
+      pointer-events: none;
+      transition: .25s ease;
+    }
+
+    .error-text {
+      display: none;
+      margin-top: 5px;
+    }
+
+    input:focus + label,
+    input:not(:placeholder-shown) + label {
+      top: 0px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 120%;
+      color: $color-dark;
+      padding: 0 8px;
+      background: $color-white;
+    }
+
+    &.error {
+      input {
+        border-color: $field-error;
+      }
+
+      label {
+        top: 0;
+        font-size: 18px;
+        color: $color-dark;
+        background: $color-white;
+        padding: 0 8px;
+      }
+
+      .error-text {
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        color: $field-error;
+        text-align: left;
+        padding-left: 16px;
+      }
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .white_btn {
+    font-weight: 500;
+    line-height: 120%;
+    color: $color-dark;
+    width: 100%;
+    max-width: 100%;
+    height: 52px;
+    font-size: 16px;
+    border-radius: 40px;
+    box-shadow: 0px 2px 2.5px 0px #8775CD33;
+    background: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $color-light;
+    transition: .3s ease;
+
+    &:hover {
+      box-shadow: 0px 2px 2.5px 0px #8775CD33;
+      color: $color-white;
+      background: $color-lavender;
+    }
+  }
+}
+
+.enter_code {
+
+  .email_form {
+    padding: 40px 8px 50px 8px;
+
+    &_text {
+      max-width: 340px;
+      margin: 10px auto 20px auto;
+    }
+  }
+}
+
+.otp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  max-width: 550px;
+  margin: auto;
+}
+
+.otp-inputs {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 5px;
+  margin-bottom: 10px;
+
+  div {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+  }
+
+  input {
+    width: 100%;
+    border-radius: 20px;
+    border: 1.5px solid $color-dark;
+    font-weight: 500;
+    font-size: 40px;
+    height: 72px;
+    line-height: 120%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-dark;
+    text-align: center;
+    outline: none;
+    transition: 0.2s ease;
+
+    &:focus {
+      border-color: $color-lavender;
+    }
+  }
+}
+
+.otp-container[data-state="error"] {
+  .otp-inputs input {
+    border-color: $color-error-2;
+  }
+
+  .otp-message {
+    color: $color-error-2;
+  }
+}
+
+.otp-message {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  color: $color-grey;
+  text-align: left;
+}
+
+.resend-btn {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  color: $color-dark;
+  text-align: left;
+}
+// email

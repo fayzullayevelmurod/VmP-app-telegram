@@ -1,0 +1,525 @@
+// dark_theme
+.dark-theme {
+  background-color: $color-dark;
+
+  .lang-select {
+
+    &__current {
+      color: $color-light;
+    }
+
+    &__list {
+      background: #ffffff;
+      border: 1px solid #e1e3ff;
+
+      li {
+        color: $color-dark;
+
+        &:hover {
+          background: #f4f5ff;
+        }
+      }
+    }
+  }
+
+  .header_two {
+    .prev_link {
+      svg {
+        path {
+          stroke: $color-white;
+        }
+      }
+    }
+
+    .logo {
+      .light_img {
+        display: none;
+      }
+
+      .dark_img {
+        display: block;
+      }
+    }
+  }
+
+  .header_three {
+    .section_title {
+      color: $color-light;
+    }
+  }
+
+  .email {
+
+    &_form {
+      border: 1px solid $color-white;
+
+      h2 {
+        color: $color-light;
+      }
+
+      &_text {
+        color: $color-light;
+      }
+    }
+
+    .field {
+
+      input {
+        border: 1.5px solid $color-light;
+        color: $color-grey;
+
+        &:focus {
+          border-color: $color-light;
+        }
+      }
+
+      label {
+        color: $color-grey;
+      }
+
+      input:focus + label,
+      input:not(:placeholder-shown) + label {
+        color: $color-light;
+        background: #111135;
+      }
+
+      &.error {
+        input {
+          border-color: $field-error;
+        }
+
+        label {
+          color: $color-light;
+          background: $color-white;
+        }
+
+        .error-text {
+          color: $field-error;
+        }
+      }
+    }
+
+    .white_btn {
+      color: $color-white;
+      background: #111135;
+      border: 1px solid #252549;
+
+      &:hover {
+        box-shadow: 0px 2px 2.5px 0px #8775CD33;
+        color: $color-white;
+        background: $color-lavender;
+      }
+    }
+  }
+
+  .otp-inputs {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    margin-bottom: 20px;
+
+    @include media('md') {
+      gap: 10px;
+    }
+
+    @include media('sm') {
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+
+    div {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 10px;
+
+      @include media('md') {
+        gap: 5px;
+      }
+    }
+
+    input {
+      border: 1.5px solid $color-light;
+      color: $color-light;
+
+      &:focus {
+        border-color: $color-lavender;
+      }
+    }
+  }
+
+  .otp-container[data-state="error"] {
+    .otp-inputs input {
+      border-color: $color-error-2;
+    }
+
+    .otp-message {
+      color: $color-error-2;
+    }
+  }
+
+  .otp-message {
+    color: $color-grey;
+  }
+
+  .resend-btn {
+    color: $color-light;
+    border-bottom: 1px solid $color-light;
+  }
+
+  .header_three {
+    .header_in {
+      background: $color-dark;
+    }
+
+    .prev_link {
+      svg {
+        path {
+          stroke: $color-white;
+        }
+      }
+    }
+
+    .logo {
+      .light_img {
+        display: none;
+      }
+
+      .dark_img {
+        display: block;
+      }
+    }
+  }
+
+  // personal_account
+  .section_title {
+    color: $color-light;
+  }
+
+  .accounts {
+
+    &_left {
+      ul {
+        b {
+          color: $color-light;
+        }
+
+        span, a {
+          color: $color-light;
+        }
+      }
+
+      h6 {
+        color: $color-light;
+      }
+
+      p {
+        color: $color-light;
+      }
+
+      .white_btn {
+        color: $color-light;
+        border: 1px solid #252549;
+        background: transparent;
+
+        &:hover {
+          color: $color-white;
+          background: $color-lavender;
+        }
+      }
+
+      .white_btn_two {
+        color: $color-grey;
+        background: transparent;
+
+        &:hover {
+          color: $color-light;
+        }
+      }
+    }
+  }
+
+  .connected_devices {
+
+    h3 {
+      color: $color-light;
+    }
+
+    &_block {
+      &_left {
+        span {
+          color: $color-light;
+        }
+
+        svg {
+          path {
+            stroke: $color-light;
+          }
+        }
+      }
+    }
+  }
+
+  .tabs {
+
+    &__btn {
+      color: $color-grey;
+
+      &.is-active {
+        color: $color-dark;
+        background: $color-lavender;
+      }
+    }
+  }
+
+  .modal_bg_one {
+    background: rgba(37, 37, 73, .5);
+  }
+  .modal_bg_two {
+    background: rgba(37, 37, 73, .7);
+  }
+  .modal_bg_three {
+    background: rgba(37, 37, 73, .5);
+  }
+  .modal_bg_four {
+    background: rgba(37, 37, 73, .5);
+  }
+
+  .modal_manage {
+    background: $color-dark;
+
+    &_close {
+      svg {
+        path {
+          stroke: $color-light;
+        }
+      }
+    }
+
+    h3 {
+      color: $color-light;
+    }
+
+    label {
+      color: $color-light;
+    }
+
+    .input_block {
+      border: 1px solid $color-light;
+
+      input {
+        color: $color-light;
+
+        &::placeholder {
+          color: $color-grey;
+        }
+      }
+    }
+  }
+
+  .modal_device_name {
+    background: $color-dark;
+
+    h3 {
+      color: $color-light;
+    }
+  }
+
+  .subscription_modal {
+    background: $color-dark;
+
+    &_close {
+      svg {
+        path {
+          stroke: $color-light;
+        }
+      }
+    }
+
+    h3 {
+      color: $color-light;
+    }
+
+    span {
+      color: $color-light;
+    }
+
+    .tabs {
+
+      &__btn {
+        color: $color-light;
+        background: #252549;
+        border: 2px solid transparent;
+
+        &.is-active {
+          border: 2px solid $color-light;
+        }
+      }
+    }
+
+    .plan_btn {
+      color: $color-light;
+      border: 1px solid #252549;
+      box-shadow: 0px 2px 2.5px 0px #8775CD33;
+      background: $color-dark;
+
+      &:hover {
+        box-shadow: 0px 2px 2.5px 0px #8775CD33;
+        color: $color-white;
+        background: $color-lavender;
+      }
+    }
+  }
+
+  .plan_modal {
+    background: $color-dark;
+
+    &_close {
+
+      svg {
+        path {
+          stroke: $color-light;
+        }
+      }
+    }
+
+    h3 {
+      color: $color-light;
+    }
+
+    ul {
+
+      li {
+        color: $color-light;
+      }
+    }
+
+    h6 {
+      color: $color-light;
+
+      b {
+        color: $color-light;
+      }
+    }
+
+    span {
+      color: $color-light;
+    }
+
+    .tabs {
+
+      &__btn {
+        color: $color-light;
+        background: #252549;
+
+        &.is-active {
+          border: 2px solid $color-light;
+        }
+      }
+    }
+
+    .buy_btn {
+      color: $color-light;
+      border: 1px solid #252549;
+      background: $color-dark;
+
+      &:hover {
+        color: $color-white;
+        background: $color-lavender;
+      }
+    }
+  }
+
+  .form_btns {
+
+    button {
+      color: $color-dark;
+      border: 1px solid $color-light;
+    }
+
+    .white_btn {
+      box-shadow: 0px 2px 2.5px 0px #8775CD33;
+      background: $color-dark;
+      border: 1px solid #252549;
+      color: $color-white;
+
+      &:hover {
+        box-shadow: 0px 2px 2.5px 0px #8775CD33;
+        color: $color-white;
+        background: $color-lavender;
+      }
+    }
+
+    .no_btn {
+      box-shadow: 0px 2px 2.5px 0px #8775CD33;
+      background: $color-dark;
+      border: 1px solid #252549;
+      color: $color-light;
+    }
+
+    .delete_btn {
+      color: $color-error-2;
+      box-shadow: 0px 2px 2.5px 0px #8775CD33;
+      border: 1px solid $color-error-2
+    }
+
+    .red_btn {
+      color: $color-error-2;
+      box-shadow: 0px 2px 2.5px 0px #8775CD33;
+      border: 1px solid $color-error-2
+    }
+  }
+  // personal_account
+
+  .footer {
+
+    &_left {
+
+      .logo {
+        .light_img {
+          display: none;
+        }
+
+        .dark_img {
+          display: block;
+        }
+      }
+
+      span {
+        color: $color-light;
+      }
+    }
+
+    &_right {
+
+      .social_media,
+      .policy {
+        @include media('sm') {
+          grid-column: 1 / -1;
+        }
+      }
+
+      ul {
+        li {
+          a {
+            color: $color-light;
+
+            &:hover {
+              border-bottom: 1px solid $color-light;
+            }
+          }
+        }
+      }
+    }
+
+    .social_media {
+      img {
+        filter: contrast(0.1);
+      }
+    }
+  }
+}
+
+.email_body.dark-theme {
+  background-image: url('../images/email_bg5_dark.webp');
+}
+// dark_theme
