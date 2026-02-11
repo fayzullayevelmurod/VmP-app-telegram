@@ -129,6 +129,12 @@
     gap: 10px;
   }
 
+  &_left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
   &_block {
     border-radius: 20px;
     background: $color-light;
@@ -136,12 +142,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    &_left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
 
     .percent {
       width: 38px;
@@ -243,8 +243,9 @@
   &__nav {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px 15px;
     margin-bottom: 30px;
+    flex-wrap: wrap;
   }
 
   &__btn {
